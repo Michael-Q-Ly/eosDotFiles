@@ -1,0 +1,39 @@
+{
+	"languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp", "arduino"],
+			"rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+			"initializationOptions": {
+				"cache": {
+					"directory": "/tmp/ccls"
+				}
+			}
+		}
+	},
+
+	"languageserver": {
+		"clangd": {
+			"command": "clangd",
+			"args": ["--background-index"],
+			"rootPatterns": [
+				"compile_flags.txt",
+				"compile_commands.json",
+				".vim/",
+				".git/",
+				".hg/"
+			],
+		"filetypes": ["c", "cpp", "objc", "objcpp"]
+		}
+	},
+	"diagnostic.displayByAle": true,
+ 
+	"languageserver": {
+		"arduino": { 
+			"command":"${ARDUINO_LANGUAGE_SERVER}",
+			"rootPatterns":["*.ino"],
+			"filetypes":["arduino", "cc", "cpp", "c++"],
+			"args":["-cli", "$ARDUINO_CLI_PATH", "-clangd", "/usr/bin/clangd", "-cli-config", "${HOME}/.arduino15/"]
+		}
+	}
+}
