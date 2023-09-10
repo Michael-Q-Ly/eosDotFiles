@@ -38,3 +38,9 @@
 8. You may type ':Dox' and ':DoxAuthor' for Doxygen comments in C/C++
 9. The c.vim plugin has a ":h csupport" help menu
 	* You can use '\\cfr' inside your file for a comment frame
+
+# Z-Shell
+
+1. Use pacman to install zsh
+2. Run zsh and go through walkthrough. Save settings
+3. Install oh-my-zsh if you want. I use this moving forward.
