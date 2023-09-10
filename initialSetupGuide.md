@@ -38,3 +38,13 @@
 8. You may type ':Dox' and ':DoxAuthor' for Doxygen comments in C/C++
 9. The c.vim plugin has a ":h csupport" help menu
 	* You can use '\\cfr' inside your file for a comment frame
+
+# Music
+
+1. Install spotifyd through AUR -- yay -S spotifyd
+2. Create a new $(HOME)/.config/spotifyd/spofitfyd.config file
+3. Create a new /etc/systemd/system/spotifyd.service file from the .config/Music file in this repo
+4. Enable the service -- systemctl enable spotifyd.service
+5. Check status of service -- systemctl status spotifyd.service
+6. Install spotify-tui from AUR -- yay -S spotify-tui
+7. Launch spt, hit 'd' to enter device list, and config which device to use (likely spotifyd)
