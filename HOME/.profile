@@ -1,4 +1,15 @@
-export TERMINAL=xfce4-terminal
+# export TERMINAL=xfce4-terminal
+export TERMINAL=kitty
 #export QT_QPA_PLATFORMTHEME=qt5ct
-#export QT_QPA_PLATFORMTHEME=qt6ct
+
 export PATH=$PATH:$HOME/.local/bin/
+
+# fzf
+export FZF_DEFAULT_COMMAND="fd --type f --color=never --hidden"
+export FZF_DEFAULT_OPTS="--no-height" 
+
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --line-range :50 {}'"
+
+export FZF_ALT_C_COMMAND="fd --type d . --color=never --hidden"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -50'"
